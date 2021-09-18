@@ -125,21 +125,8 @@
   } */
   
   
-  
-  .box22{
-    display: flex;
-    padding: 10px 10px;
-    margin: 1em 0;
-    text-align: center;
-    background: #f4f4f4;
-    border-left: solid 6px #a48c61;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
-    color:#a48c61
-}
-
-
-.check{
-  display: block;
+  .check {
+    display: block;
     padding: 20px 0;
     width:70%; 
     height:100%;
@@ -152,8 +139,8 @@
       to right,
       #000000 0%,
       #000000 50%,
-      #a48c61 50%,
-      #a48c61 100%
+      #47566a 50%,
+      #3d4959 100%
     );
     box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
     transition: background-position ease 0.4s;
@@ -162,41 +149,50 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-}
-
-.check:hover {
-  background-position: 0 0;
-}
-
-.return {
-  display: block;
-  padding: 20px 0;
-  width:70%; 
-  height:100%;
-  margin: 0 auto;
-  margin: 0 0 0 auto;
-  width: 30%;
-  border-radius: 6px;
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 200% auto;
-  background-image: linear-gradient(
-    to right,
-    #000000 0%,
-    #000000 50%,
-    #a48c61 50%,
-    #a48c61 100%
-  );
-  box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
-  transition: background-position ease 0.4s;
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.return:hover {
-  background-position: 0 0;
-}
+  }
   
+  .check:hover {
+    background-position: 0 0;
+  }
+  
+  .box22{
+    display: flex;
+    padding: 10px 10px;
+    margin: 1em 0;
+    text-align: center;
+    background: #f4f4f4;
+    border-left: solid 6px #3d4959;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+    color:#3d4959
+}
+
+  
+.return {
+    display: block;
+    padding: 20px 0;
+    margin: 0 0 0 auto;
+    width: 30%; 
+    height:100%;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 200% auto;
+    background-image: linear-gradient(
+      to right,
+      #000000 0%,
+      #000000 50%,
+      #47566a 50%,
+      #3d4959 100%
+    );
+    box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+    transition: background-position ease 0.4s;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .return:hover {
+    background-position: 0 0;
+  }
