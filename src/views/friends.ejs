@@ -2,10 +2,51 @@
 <html>
   <head>
     <title><%= title%></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/friends_page.css' />
   </head>
   <body>
-    <h1><%= title%></h1>
-    <p>Welcome to <%= title%></p>
+    <header>
+      <span class = "Logo"></span>
+      <div class = "header_container">
+        <div class = header_word>
+          <!-- <a href='url'> -->
+            <p>サークル一覧</p>
+          <!-- </a> -->
+        </div>
+        <div class = header_word>
+          <!-- <a href='url'> -->
+            <p>検索</p>
+          <!-- </a> -->
+          <input class = "search_box">
+           <!-- <div class = "search_icon"> -->
+             <!-- <img src = "/public/stylesheets/search_icon.png"> -->
+           <!-- </div>  -->
+          </input>
+        </div>
+        <div class = header_word>
+          <!-- <a href='url'> -->
+            <p>ログイン/新規登録</p>
+          <!-- </a> -->
+        </div>
+      </div>
+    </header>
+    <div class = "space"></div>
+
+    <div class="box22">
+      <h1>友達一覧</h1>
+    </div>
+    <a class = "return" href="#">マイページに戻る</a>
+    <table>
+      <tr>
+        <th>名前</th>
+        <th>学部</th>
+        <th>Check</th>
+      </tr>
+      <tr class= "list">
+        <td class="icon A">Aさん</td>
+        <td>工学部</td>
+        <td class= "tag"><a href="#">チャットを送る</a></td>
+      </tr>
+    </table>
   </body>
 </html>
