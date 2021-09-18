@@ -2,35 +2,34 @@
 <html>
   <head>
     <title><%= title%></title>
+    <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel='stylesheet' href='/stylesheets/style_detail.css' />
-  </head>
-  <body>
   </head>
   <body>
     <header>
       <span class = "Logo"></span>
       <div class = "header_container">
         <div class = header_word>
-          <!-- <a href='url'> -->
+          <a class = heada href='http://localhost:3000/clubs'>
             <p>サークル一覧</p>
-          <!-- </a> -->
+          </a> 
         </div>
-        <div class = header_word>
-          <!-- <a href='url'> -->
-            <p>検索</p>
-          <!-- </a> -->
-          <input class = "search_box">
+        <div id=signin class = header_word>
+          <a  class = heada href='http://localhost:3000/signin'>
+            <p>ログイン</p>
+          </a>
+          <!-- <input class = "search_box"> -->
            <!-- <div class = "search_icon"> -->
              <!-- <img src = "/public/stylesheets/search_icon.png"> -->
            <!-- </div>  -->
-          </input>
+          <!-- </input> -->
         </div>
         <div class = header_word>
-          <!-- <a href='url'> -->
-            <p>ログイン/新規登録</p>
-          <!-- </a> -->
+          <a  class = heada href='http://localhost:3000/signup'>
+            <p>新規登録</p>
+          </a>
         </div>
-      </div>
+      </div>      
     </header>
     <div class = "space"></div>
 
