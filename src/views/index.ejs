@@ -2,8 +2,9 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/ress.min.css' />
+    <link rel='stylesheet' href='/stylesheets/header.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="module" src = "/javascripts/header.js"></script>
   </head>
   <body>
     <!-- <h1><%= title %></h1>
@@ -12,29 +13,65 @@
       <span class = "Logo"></span>
       <div class = "header_container">
         <div class = header_word>
-          <!-- <a href='url'> -->
+          <a class = heada href='http://localhost:3000/clubs'>
             <p>サークル一覧</p>
-          <!-- </a> -->
+          </a> 
         </div>
-        <div class = header_word>
-          <!-- <a href='url'> -->
-            <p>検索</p>
-          <!-- </a> -->
-          <input class = "search_box">
+        <div id=signin class = header_word>
+          <a  class = heada href='http://localhost:3000/signin'>
+            <p>ログイン</p>
+          </a>
+          <!-- <input class = "search_box"> -->
            <!-- <div class = "search_icon"> -->
              <!-- <img src = "/public/stylesheets/search_icon.png"> -->
            <!-- </div>  -->
-          </input>
+          <!-- </input> -->
         </div>
         <div class = header_word>
-          <!-- <a href='url'> -->
-            <p>ログイン/新規登録</p>
-          <!-- </a> -->
+          <a  class = heada href='http://localhost:3000/signup'>
+            <p>新規登録</p>
+          </a>
         </div>
       </div>
+
+
+
+
+
+
+      
     </header>
+
     <div class = "space"></div>
-    <!-- <div class = "cle"></div> -->
+
+    <table>
+      <tr>
+        <th>日時</th>
+        <th>サークル名</th>
+        <th>イベント</th>
+        <th>Cheak</th>
+      </tr>
+      <tr class= "list">
+        <td class="icon bird">10/10</td>
+        <td>サッカー部</td>
+        <td>ケーキ作り</td>
+        <td class= "tag"><a id = submit class = abox href="#">詳しく見る</a></td>
+      </tr>
+      <tr class= "list">
+        <td class="icon whale">10/11</td>
+        <td>テニスサークル</td>
+        <td>飲み会</td>
+        <td class= "tag"><a class = abox href="#">詳しく見る</a></td>
+      </tr>
+      <tr class= "list">
+        <td class="icon crab">10/12</td>
+        <td>バスケサークル</td>
+        <td>新入生歓迎会</td>
+        <td class= "tag"><a class = abox href="#">詳しく見る</a></td>
+      </tr>
+    </table>
+
+    
 
 
   </body>
