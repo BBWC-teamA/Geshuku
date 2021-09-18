@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title%></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title%></h1>
-    <p>Welcome to <%= title%></p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/style_signin.css">
+    <title>signup</title>
+</head>
+<body>
+    <header>
+        <span class = "Logo"></span>
+        <div class = "header_container">
+          <div class = header_word>
+            <!-- <a href='url'> -->
+              <p>サークル一覧</p>
+            <!-- </a> -->
+          </div>
+          <div class = header_word>
+            <!-- <a href='url'> -->
+              <p>検索</p>
+            <!-- </a> -->
+            <input class = "search_box">
+             <!-- <div class = "search_icon"> -->
+               <!-- <img src = "/public/stylesheets/search_icon.png"> -->
+             <!-- </div>  -->
+            </input>
+          </div>
+          <div class = header_word>
+            <!-- <a href='url'> -->
+              <p>ログイン/新規登録</p>
+            <!-- </a> -->
+          </div>
+        </div>
+      </header>
+      <div class = "space"></div>
+
+
+
+<div id="log">
+    <h1>新規登録</h1>
+    <dl>
+        <dt>Email</dt>
+        <dd><input id="email" class = "search_box" type="text"></dd>
+        <dt>パスワード</dt>
+        <dd><input id="password" class = "search_box" type="text"></dd></br>
+        <dt>パスワード（確認）</dt>
+        <dd><input id="re_password" class = "search_box" type="text"></dd></br>
+        <input id="submit" type="submit" value="登録">
+    </dl>
+</div>
+<script type="text/javascript" src="/javascripts/sign.js"></script>
+
+</body>
 </html>
