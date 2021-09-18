@@ -3,7 +3,10 @@
   <head>
     
     <title>マイページ</title>
+    <link rel='stylesheet' href='/stylesheets/header.css' />
     <link rel='stylesheet' href='/stylesheets/mypage_style.css' />
+    <script type="module" src = "/javascripts/header.js"></script>
+
     <style>
       body {
        font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -13,7 +16,7 @@
         font: 30px "Lucida Grande", Helvetica, Arial, sans-serif;
         width: 100%;
         height: 50px;
-        background-color: rgb(184, 184, 184);
+        background-color: rgb(255, 255, 255);
       }
 
 
@@ -25,30 +28,31 @@
       <span class = "Logo"></span>
       <div class = "header_container">
         <div class = header_word>
-          <!-- <a href='url'> -->
+          <a class = heada href='http://localhost:3000/clubs'>
             <p>サークル一覧</p>
-          <!-- </a> -->
+          </a> 
         </div>
-        <div class = header_word>
-          <!-- <a href='url'> -->
-            <p>検索</p>
-          <!-- </a> -->
-          <input class = "search_box">
+        <div id=signin class = header_word>
+          <a  class = heada href='http://localhost:3000/signin'>
+            <p>ログイン</p>
+          </a>
+          <!-- <input class = "search_box"> -->
            <!-- <div class = "search_icon"> -->
              <!-- <img src = "/public/stylesheets/search_icon.png"> -->
            <!-- </div>  -->
-          </input>
+          <!-- </input> -->
         </div>
         <div class = header_word>
-          <!-- <a href='url'> -->
-            <p>ログイン/新規登録</p>
-          <!-- </a> -->
+          <a  class = heada href='http://localhost:3000/signup'>
+            <p>新規登録</p>
+          </a>
         </div>
       </div>
     </header>
+
     <div class = "space"></div>
 
-
+    <p>&emsp;</p>
     <h1>&emsp;マイページ</h1>
     <div>&emsp;</div>
 
