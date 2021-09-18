@@ -2,10 +2,59 @@
 <html>
   <head>
     <title><%= title%></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/students_page.css' />
   </head>
   <body>
-    <h1><%= title%></h1>
-    <p>Welcome to <%= title%></p>
+    <header>
+      <span class = "Logo"></span>
+      <div class = "header_container">
+        <div class = header_word>
+          <!-- <a href='url'> -->
+            <p>サークル一覧</p>
+          <!-- </a> -->
+        </div>
+        <div class = header_word>
+          <!-- <a href='url'> -->
+            <p>検索</p>
+          <!-- </a> -->
+          <input class = "search_box">
+           <!-- <div class = "search_icon"> -->
+             <!-- <img src = "/public/stylesheets/search_icon.png"> -->
+           <!-- </div>  -->
+          </input>
+        </div>
+        <div class = header_word>
+          <!-- <a href='url'> -->
+            <p>ログイン/新規登録</p>
+          <!-- </a> -->
+        </div>
+      </div>
+    </header>
+    <div class = "space"></div>
+
+
+    
+    <table>
+      <tr>
+        <th>名前</th>
+        <th>学部</th>
+        <th>Check</th>
+      </tr>
+      <tr class= "list">
+        <td class="icon bird">トリさん</td>
+        <td>空を飛ぶこと</td>
+        <td class= "tag"><a href="#">詳しく見る</a></td>
+      </tr>
+      <tr class= "list">
+        <td class="icon whale">クジラさん</td>
+        <td>潮を吹くこと</td>
+        <td class= "tag"><a href="#">詳しく見る</a></td>
+      </tr>
+      <tr class= "list">
+        <td class="icon crab">カニさん</td>
+        <td>反復横飛び</td>
+        <td class= "tag"><a href="#">詳しく見る</a></td>
+      </tr>
+    </table>
   </body>
 </html>
