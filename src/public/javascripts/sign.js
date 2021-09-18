@@ -1,9 +1,9 @@
 
 
-var log_submit = document.getElementById("log_submit");
+var submit = document.getElementById("submit");
 //var s_submit = document.getElementById("s_submit");
 
-log_submit.addEventListener('click', (e) => {
+submit.addEventListener('click', (e) => {
     // 規定の動作をキャンセル
     e.preventDefault();
     // イベント発生時に行う処理
@@ -20,5 +20,5 @@ log_submit.addEventListener('click', (e) => {
     console.log(document.getElementById("s_email").value);
     console.log(document.getElementById("s_password").value);
 
-  })
-  */
+  })*/
+  
