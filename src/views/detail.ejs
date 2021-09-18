@@ -2,10 +2,76 @@
 <html>
   <head>
     <title><%= title%></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style_detail.css' />
   </head>
   <body>
-    <h1><%= title%></h1>
-    <p>Welcome to <%= title%></p>
+  </head>
+  <body>
+    <header>
+      <span class = "Logo"></span>
+      <div class = "header_container">
+        <div class = header_word>
+          <!-- <a href='url'> -->
+            <p>サークル一覧</p>
+          <!-- </a> -->
+        </div>
+        <div class = header_word>
+          <!-- <a href='url'> -->
+            <p>検索</p>
+          <!-- </a> -->
+          <input class = "search_box">
+           <!-- <div class = "search_icon"> -->
+             <!-- <img src = "/public/stylesheets/search_icon.png"> -->
+           <!-- </div>  -->
+          </input>
+        </div>
+        <div class = header_word>
+          <!-- <a href='url'> -->
+            <p>ログイン/新規登録</p>
+          <!-- </a> -->
+        </div>
+      </div>
+    </header>
+    <div class = "space"></div>
+
+    <div>
+      <h1 class="club_name">テニスAPPLE</h1>
+      <img src="/stylesheets/tennis.jpeg" alt="sports_tennis_woman.png" class="club_img" >
+
+      <div class="iine">
+      <button type="button" class="heart">♡</button>
+      <a class="ii" href="students">いいねしてる人一覧</a>
+      </div>
+        
+      <ul>
+        <li>スポーツ</li>
+        <li>テニス</li>
+        <li>イベント</li>
+        <li>アットホーム</li>
+      </ul>
+
+      <div class="detail">
+        <div class="d_child">
+        <h2>イベント情報</h2>
+      <p>5/10 練習（16:00-18:00）</p>
+      <p>5/25 練習（16:00-18:00）</p>
+       </div>
+
+    <div class="d_child">
+      <h2>活動場所</h2>
+      <p>宝ヶ池テニスコート</p>
+      <p>御所テニスコート</p>
+    </div>
+
+    <div class="d_child">
+      <h2>連絡先</h2>
+      090-xxxx-xxxx
+    </div>
+      </div>
+
+    
+
+    </div>
+  
   </body>
 </html>
