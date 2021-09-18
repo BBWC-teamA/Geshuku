@@ -1,7 +1,7 @@
 
 
 var log_submit = document.getElementById("log_submit");
-//var s_submit = document.getElementById("s_submit");
+var s_submit = document.getElementById("s_submit");
 
 log_submit.addEventListener('click', (e) => {
     // 規定の動作をキャンセル
@@ -12,7 +12,7 @@ log_submit.addEventListener('click', (e) => {
 
   })
 
-  /*
+  
   s_submit.addEventListener('click', (e) => {
     // 規定の動作をキャンセル
     e.preventDefault();
@@ -21,4 +21,4 @@ log_submit.addEventListener('click', (e) => {
     console.log(document.getElementById("s_password").value);
 
   })
-  */
+  
