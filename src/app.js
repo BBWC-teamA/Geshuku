@@ -10,6 +10,9 @@ var signinRouter = require('./routes/signin');
 var singupRouter = require('./routes/signup');
 var studentsRouter = require('./routes/students');
 var clubsRouter = require('./routes/clubs');
+var mypageRouter = require('./routes/mypage');
+var detailRouter = require('./routes/detail');
+var friendsRouter = require('./routes/friends');
 
 var app = express();
 
@@ -29,6 +32,9 @@ app.use('/signin', signinRouter);
 app.use('/signup', singupRouter);
 app.use('/students', studentsRouter);
 app.use('/clubs', clubsRouter);
+app.use('/mypage', mypageRouter);
+app.use('/detail', detailRouter);
+app.use('/friends', friendsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
