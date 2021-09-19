@@ -21,11 +21,11 @@ router.post('/', function(req, res, next) {
                 )
                 console.log(studentId.id);
                 tagArray.forEach(tag => {
-                    tagDataArray.push({sutudentid:studentId.id, tag:tag});
+                    tagDataArray.push({studentid:studentId.id, tag:tag});
                 });
                 db.StudentTag.destroy({
                     where: {
-                        id: studentId
+                        studentid: studentId.id
                     }
                 }).then(() => {
                     db.StudentTag.bulkCreate(tagDataArray);
@@ -33,17 +33,14 @@ router.post('/', function(req, res, next) {
                 });
             });
         } else {
+            console.log(req.body);
             db.Student.create({
                 name: req.body.name,
                 department: req.body.department,
                 contact: req.body.contact
-            });
-            db.Student.findOne({
-                attributes: ['id'],
-                where: {contact: req.body.contact}
-            }).then(studentId => {
+            }).then(student => {
                 tagArray.forEach(tag => {
-                    tagDataArray.push({sutudentid:studentId.id, tag:tag});
+                    tagDataArray.push({studentid:student.id, tag:tag});
                 });
                 db.StudentTag.bulkCreate(tagDataArray);
                 res.render('mypage', { title: 'マイページ' });
