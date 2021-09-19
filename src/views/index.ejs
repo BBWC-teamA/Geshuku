@@ -48,7 +48,7 @@
           <% clubs.forEach((club) => { %>
           <tr>
             <td>
-              <a class ="circle" href='/detail'>
+              <a class ="circle" href='/detail/<%= club.id %>'>
                 <img class= "circle_icon"  src= "<%= club.image %>">
               </a>
               <h1 class="name"><%= club.name %></h1>
