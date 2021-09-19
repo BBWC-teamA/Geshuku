@@ -1,8 +1,3 @@
-/*!
- * ress.css • v1.2.2
- * MIT License
- * github.com/filipelinhares/ress
- */html{box-sizing:border-box;overflow-y:scroll;-webkit-text-size-adjust:100%}*,:after,:before{background-repeat:no-repeat;box-sizing:inherit}:after,:before{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0}audio:not([controls]){display:none;height:0}hr{overflow:visible}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}summary{display:list-item}small{font-size:80%}[hidden],template{display:none}abbr[title]{border-bottom:1px dotted;text-decoration:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace,monospace}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}input{border-radius:0}[role=button],[type=button],[type=reset],[type=submit],button{cursor:pointer}[disabled]{cursor:default}[type=number]{width:auto}[type=search]{-webkit-appearance:textfield}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit}optgroup{font-weight:700}button{overflow:visible}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:0;padding:0}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button:-moz-focusring{outline:1px dotted ButtonText}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}button,select{text-transform:none}button,input,select,textarea{background-color:transparent;border-style:none;color:inherit}select{-moz-appearance:none;-webkit-appearance:none}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{border:0;color:inherit;display:table;max-width:100%;white-space:normal}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}img{border-style:none}progress{vertical-align:baseline}svg:not(:root){overflow:hidden}audio,canvas,progress,video{display:inline-block}@media screen{[hidden~=screen]{display:inherit}[hidden~=screen]:not(:active):not(:focus):not(:target){position:absolute!important;clip:rect(0 0 0 0)!important}}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled]{cursor:default}::-moz-selection{background-color:#b3d4fc;color:#000;text-shadow:none}::selection{background-color:#b3d4fc;color:#000;text-shadow:none}
 
 
  body {
@@ -22,70 +17,6 @@
   
   }
   
-  /* ヘッダー */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #B5B5B5;
-    padding:0 5vw;
-    height: 110px;
-    width: 100%;
-    position: fixed;
-  }
-  .header_container{
-    display: flex;
-    justify-content: space-between;
-    width: 40vw;
-    height: 100%;
-    align-items: center;
-  }
-  .header_word{
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .header_word:hover{
-    border-bottom:solid 2px red;
-  }
-  .search_box{
-    width: 150px;
-    height: 27.2px;
-    margin-left: 5px;
-    background-color: aliceblue;
-    border-radius: 5px;
-    border: solid 1px black;
-    position: relative;
-  }
-  .search_icon{
-    background-image: url(search_icon.png);
-    background-size: contain;
-    position: absolute;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    margin-right: 2px;
-  }
-  .Logo{
-    background-image: url(img/Logo.png);
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-  }
-  /* .cle{
-    background-image: url(aa.jpg);
-    background-size: contain;
-    width: 100%;
-    height: 100vh;
-  } */
-  .space{
-    width: 100%;
-    height: 110px;
-  }
-  
-
-
-
 
   /* students_page */
   table{
@@ -213,14 +144,15 @@
   }
 
   .circle_icon{
-    width:100%;
-    border: solid 5px #090a09;
+    width:95%;
+    height:90%;
+    border: solid 3px #090a09;
     border-radius: 15%;
     transition-duration: 0.3s;	/*変化に掛かる時間*/
   }  
 
   .circle_icon:hover{
-    transform: scale(1.1);	/*画像の拡大率*/
+    transform: scale(1.05);	/*画像の拡大率*/
 	transition-duration: 0.3s;	/*変化に掛かる時間*/
   }
   .name{
@@ -234,5 +166,31 @@
     display: flex;
     flex-wrap: wrap;
     /* align-content: space-between; */
+    
   }
 
+  .circle_box{
+    display: flex;
+    
+  }
+
+.circle_button{
+  display: flex;
+  flex-direction: column;
+  width:15vw;
+  height:30vh;
+  margin:1% 1%;
+}
+
+.circle__{
+  display: flex;
+  flex-wrap: wrap;
+  width:80vw;
+
+}
+
+.tag{
+  width:20vw;
+  margin-left: 3%;
+
+}

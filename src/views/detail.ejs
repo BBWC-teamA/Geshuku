@@ -32,45 +32,64 @@
       </div>      
     </header>
     <div class = "space"></div>
+    <div class="box22">
+      <h1>サークル詳細</h1>
+    </div>
+
 
     <div>
-      <h1 class="club_name">テニスAPPLE</h1>
-      <img src="/stylesheets/tennis.jpeg" alt="sports_tennis_woman.png" class="club_img" >
+      <h1 class = center><%= club.name %></h1>
+    </div>
 
-      <div class="iine">
+    <img src="<%= club.image %>" alt="sports_tennis_woman.png" class="club_img" >
+
+
+    <div class="iine">
       <button type="button" class="heart">♡</button>
       <a class="ii" href="students">いいねしてる人一覧</a>
-      </div>
-        
-      <ul>
-        <li>スポーツ</li>
-        <li>テニス</li>
-        <li>イベント</li>
-        <li>アットホーム</li>
-      </ul>
-
-      <div class="detail">
-        <div class="d_child">
-        <h2>イベント情報</h2>
-      <p>5/10 練習（16:00-18:00）</p>
-      <p>5/25 練習（16:00-18:00）</p>
-       </div>
-
-    <div class="d_child">
-      <h2>活動場所</h2>
-      <p>宝ヶ池テニスコート</p>
-      <p>御所テニスコート</p>
     </div>
 
-    <div class="d_child">
-      <h2>連絡先</h2>
-      090-xxxx-xxxx
-    </div>
-      </div>
+    <BR>
+    <BR>
+      
+    <h2 class = center>-#Tag-</h2>
 
+    <% tags.forEach((tag) => { %>
+    <ul>
+      <li><%= tag.tag %></li>
+    </ul>
+    <% }) %>
+    <BR>
+      <BR>
     
-
+    <h1 class = center>活動内容</h1>
+    <div class = content>  
+      <p><%= club.description %></p>
     </div>
+    <BR>
+    <BR>
+
+      <h1 class = center>イベント一覧</h1>
   
+      <table>
+        <% events.forEach((event) => { %>
+        <tr>
+          <th>日時</th>
+          <th>イベント</th>
+          <th>イベント内容</th>
+          <th>　</th>
+        </tr>
+        <tr class= "list">
+          <td><%= event.date %></td>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+          <td class= "tag"><a class= "check" href="http://localhost:3000/detail">イベントを予約</a></td>
+          <% }) %>
+        </table>
+      
+  
+      <br>
+      <br>
+
   </body>
 </html>
