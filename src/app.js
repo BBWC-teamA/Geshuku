@@ -14,6 +14,7 @@ var mypageRouter = require('./routes/mypage');
 var detailRouter = require('./routes/detail');
 var friendsRouter = require('./routes/friends');
 var editRouter = require('./routes/edit');
+var setInfoRouter = require('./routes/setInfo');
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use('/mypage', mypageRouter);
 app.use('/detail', detailRouter);
 app.use('/friends', friendsRouter);
 app.use('/edit', editRouter);
+app.use('/setInfo', setInfoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
