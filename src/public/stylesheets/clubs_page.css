@@ -136,18 +136,21 @@
   }
   
  .circle{
-    width: 100%;
-    overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+  width: 100%;  
+  overflow: visible;	/*拡大時にはみ出た部分を隠す*/
     margin:0  auto;               /* 中央寄せ */
     padding:0 auto;
     text-align: center;
+    /* border: solid 3px #090a09; */
+    border-radius: 15%;
   }
 
   .circle_icon{
-    width:95%;
-    height:90%;
-    border: solid 3px #090a09;
+    width:20vw;
+    height:20vw;
     border-radius: 15%;
+    object-fit: contain;
+    border: solid 3px #090a09;
     transition-duration: 0.3s;	/*変化に掛かる時間*/
   }  
 
@@ -169,28 +172,27 @@
     
   }
 
-  .circle_box{
+  /* .circle_box{
     display: flex;
-    
-  }
+    border: solid 3px #090a09;
+  } */
 
 .circle_button{
   display: flex;
   flex-direction: column;
-  width:15vw;
-  height:30vh;
+  width:20vw;
+  /* height:20vw; */
   margin:1% 1%;
+  text-align: center;
 }
 
 .circle__{
   display: flex;
   flex-wrap: wrap;
-  width:80vw;
-
 }
 
-.tag{
+/* .tag{
   width:20vw;
   margin-left: 3%;
-
-}
+  border: solid 3px #090a09;
+} */
