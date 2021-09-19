@@ -137,53 +137,57 @@ table td.icon{
 }
 
 .circle{
-  width: 100%;
-  overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
-  margin:0  auto;               /* 中央寄せ */
-  padding:0 auto;
+  width: 100%;  
+  overflow: visible;	/*拡大時にはみ出た部分を隠す*/
+    margin:0  auto;               /* 中央寄せ */
+    padding:0 auto;
+    text-align: center;
+    /* border: solid 3px #090a09; */
+    border-radius: 15%;
+  }
+
+  .circle_icon{
+    width:20vw;
+    height:20vw;
+    border-radius: 15%;
+    object-fit: contain;
+    border: solid 3px #090a09;
+    transition-duration: 0.3s;	/*変化に掛かる時間*/
+  }  
+
+  .circle_icon:hover{
+    transform: scale(1.05);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+  }
+  .name{
+  overflow-wrap: break-word;
+  }
+
+  .activity{
+    overflow-wrap: break-word;
+  }
+  .container_circle{
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: space-between; */
+    
+  }
+
+  /* .circle_box{
+    display: flex;
+    border: solid 3px #090a09;
+  } */
+
+.circle_button{
+  display: flex;
+  flex-direction: column;
+  width:20vw;
+  /* height:20vw; */
+  margin:1% 1%;
   text-align: center;
 }
 
-.circle_icon{
-  width:95%;
-  height:90%;
-  border: solid 3px #090a09;
-  border-radius: 15%;
-  transition-duration: 0.3s;	/*変化に掛かる時間*/
-}  
-
-.circle_icon:hover{
-  transform: scale(1.05);	/*画像の拡大率*/
-transition-duration: 0.3s;	/*変化に掛かる時間*/
-}
-.name{
-overflow-wrap: break-word;
-}
-
-.activity{
-  overflow-wrap: break-word;
-}
-.container_circle{
+.circle__{
   display: flex;
   flex-wrap: wrap;
-  /* align-content: space-between; */
-}
-
-.circle_box{
-  display: flex;
-  
-}
-
-.circle_button{
-display: flex;
-flex-direction: column;
-width:15vw;
-height:30vh;
-margin:2% 2%;
-}
-
-.circle__{
-display: flex;
-flex-wrap: wrap;
-width:80vw;
 }

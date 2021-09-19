@@ -42,6 +42,17 @@
     <div id = reco_c class="box22">
       <h1>サークル情報</h1>
     </div>
+    
+    <div class="circle__">
+      <% clubs.forEach((club) => { %>
+        <div class="circle_button">
+        <a class ="circle" href='/detail/<%= club.id %>'>
+          <img class= "circle_icon"  src= "<%= club.image %>">
+        </a>
+        <h1 class="name"><%= club.name %></h1>
+      </div>
+        <% }) %>
+      </div>
 
     <!-- <table>
       <div class="container_circle">
@@ -52,28 +63,43 @@
               <a class ="circle" href='/detail/<%= club.id %>'>
                 <img class= "circle_icon"  src= "<%= club.image %>">
               </a>
-              <h1 class="name"><%= club.name %></h1>
-             
-            </td>
+              <h1 class="name"><%= club.name %></h1> -->
+              <!-- <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p> -->
+            <!-- </td>
           <% }) %>
-          </tr>
+          </tr> -->
+
+          <!-- <tr>
+            <td>
+              <a class ="circle" href='/detail'>
+                <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
+              </a>
+              <h1 class="name">サークル名</h1>
+              <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </td>
+
+            <td>
+              <a class ="circle" href='/detail'>
+                <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
+              </a>
+              <h1 class="name">サークル名</h1>
+              <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </td>
+
+            <td>
+              <a class ="circle" href='/detail'>
+                <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
+              </a>
+              <h1 class="name">サークル名</h1>
+              <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </td>
+            
+          </tr> -->
           
         </div>
       </div>
-    </table> -->
+    </table>
 
-    <div class="circle_box">
-      <div class="circle__">
-      <% clubs.forEach((club) => { %>
-        <div class="circle_button">
-          <a class ="circle" href='/detail/<%= club.id %>'>
-            <img class= "circle_icon"  src= "<%= club.image %>">
-          </a>
-          <h1 class="name"><%= club.name %></h1>
-        </div>
-        <% }) %>
-      </div>
-    </div>
 
 
     <div id = reco_e class="box22">
