@@ -9,7 +9,7 @@ const initMain = () => {
 
     getUser(function(user){ 
         if(user){
-            document.getElementById("signin").innerHTML="<a class = 'heada' href = '/mypage'>マイページ</a>"
+            document.getElementById("signin").innerHTML="<a class = 'heada' id='mypage'>マイページ</a>"
             document.getElementById("signup").innerHTML="<a id = logout class = 'heada' href = '/'>ログアウト</a>"
        
             var logout = document.getElementById("logout");
@@ -22,7 +22,12 @@ const initMain = () => {
                 userSignOut(function() {
                     window.location.href = '/';
                 });
-              })
+            })
+
+            document.getElementById("mypage").onclick = () => {
+                window.location.href = '/mypage/' + user.email;
+            }
+
         }
     });
   
