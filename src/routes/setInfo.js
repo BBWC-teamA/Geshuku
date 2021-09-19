@@ -37,6 +37,10 @@ router.post('/', function(req, res, next) {
                 name: req.body.name,
                 department: req.body.department,
                 contact: req.body.contact
+            });
+            db.Student.findOne({
+                attributes: ['id'],
+                where: {contact: req.body.contact}
             }).then(studentId => {
                 tagArray.forEach(tag => {
                     tagDataArray.push({sutudentid:studentId.id, tag:tag});
