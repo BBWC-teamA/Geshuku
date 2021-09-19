@@ -39,7 +39,7 @@ router.post('/', function(req, res, next) {
                 contact: req.body.contact
             }).then(studentId => {
                 tagArray.forEach(tag => {
-                    tagDataArray.push({sutudentid:studentId, tag:tag});
+                    tagDataArray.push({sutudentid:studentId.id, tag:tag});
                 });
                 db.StudentTag.bulkCreate(tagDataArray);
                 res.render('mypage', { title: 'マイページ' });
