@@ -28,12 +28,12 @@
       <span class = "Logo"></span>
       <div class = "header_container">
         <div class = header_word>
-          <a class = heada href='http://localhost:3000/clubs'>
+          <a class = heada href='/clubs'>
             <p>サークル一覧</p>
           </a> 
         </div>
         <div id=signin class = header_word>
-          <a  class = heada href='http://localhost:3000/signin'>
+          <a   class = heada href='/signin'>
             <p>ログイン</p>
           </a>
           <!-- <input class = "search_box"> -->
@@ -42,12 +42,13 @@
            <!-- </div>  -->
           <!-- </input> -->
         </div>
-        <div class = header_word>
-          <a  class = heada href='http://localhost:3000/signup'>
+        <div  id = signup class = header_word>
+          <a   class = heada href='/signup'>
             <p>新規登録</p>
           </a>
         </div>
       </div>
+      
     </header>
 
     <div class = "space"></div>
@@ -60,8 +61,8 @@
       <div class="status_container">  
         <img src="/stylesheets/Logo.png"> 
         <div class="inform_container">
-          <p class="name">下宿　太郎</p>
-          <p class="department">工学部</p>
+          <p class="name"><%= student.name %></p>
+          <p class="department"><%= student.department %></p>
           
           <div class="button_container">
             <a href="http://localhost:3000/friends" >友達一覧へ</a>
@@ -74,13 +75,11 @@
       <div>&emsp;</div>
 
       <h2>-#Tag-</h2>
-      
+      <% tags.forEach((tag) => { %>
       <ul>
-        <li>#テニス</li>
-        <li>#sport</li>
-        <li>#maniac</li>
+        <li><%= tag %></li>
       </ul>
-
+      <% }) %>
 
       <div>&emsp;</div>
       <div>&emsp;</div>
