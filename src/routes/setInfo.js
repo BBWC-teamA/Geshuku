@@ -15,9 +15,13 @@ router.post('/', function(req, res, next) {
                 attributes: ['id'],
                 where: {contact: req.body.contact}
             }).then(studentId => {
+                db.Student.Update(
+                    {name: req.body.name,department: req.body.department,contact: req.body.contact},
+                    {where : {id: studentId.id}}
+                )
                 console.log(studentId.id);
                 tagArray.forEach(tag => {
-                    tagDataArray.push({sutudentid:studentId, tag:tag});
+                    tagDataArray.push({sutudentid:studentId.id, tag:tag});
                 });
                 db.StudentTag.destroy({
                     where: {
