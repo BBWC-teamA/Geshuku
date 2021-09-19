@@ -144,14 +144,15 @@
   }
 
   .circle_icon{
-    width:100%;
-    border: solid 5px #090a09;
+    width:95%;
+    height:90%;
+    border: solid 3px #090a09;
     border-radius: 15%;
     transition-duration: 0.3s;	/*変化に掛かる時間*/
   }  
 
   .circle_icon:hover{
-    transform: scale(1.1);	/*画像の拡大率*/
+    transform: scale(1.05);	/*画像の拡大率*/
 	transition-duration: 0.3s;	/*変化に掛かる時間*/
   }
   .name{
@@ -165,5 +166,31 @@
     display: flex;
     flex-wrap: wrap;
     /* align-content: space-between; */
+    
   }
 
+  .circle_box{
+    display: flex;
+    
+  }
+
+.circle_button{
+  display: flex;
+  flex-direction: column;
+  width:15vw;
+  height:30vh;
+  margin:1% 1%;
+}
+
+.circle__{
+  display: flex;
+  flex-wrap: wrap;
+  width:80vw;
+
+}
+
+.tag{
+  width:20vw;
+  margin-left: 3%;
+
+}
