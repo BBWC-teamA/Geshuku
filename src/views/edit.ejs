@@ -4,18 +4,19 @@
     <title>edit</title>
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel='stylesheet' href='/stylesheets/style_edit.css' />
+    <script type="module" src="/javascripts/edit.js"></script>
   </head>
   <body>
     <header>
       <span class = "Logo"></span>
       <div class = "header_container">
         <div class = header_word>
-          <a class = heada href='http://localhost:3000/clubs'>
+          <a class = heada href='/clubs'>
             <p>サークル一覧</p>
           </a> 
         </div>
         <div id=signin class = header_word>
-          <a  class = heada href='http://localhost:3000/signin'>
+          <a  class = heada href='/signin'>
             <p>ログイン</p>
           </a>
           <!-- <input class = "search_box"> -->
@@ -25,7 +26,7 @@
           <!-- </input> -->
         </div>
         <div class = header_word>
-          <a  class = heada href='http://localhost:3000/signup'>
+          <a  class = heada href='/signup'>
             <p>新規登録</p>
           </a>
         </div>
@@ -35,21 +36,21 @@
 
 
 
-    <form method="POST" action="/mypage">
+    <form>
     <h1>情報入力</h1>
     <dl>
         <dt>名前</dt>
-        <dd><input id="email" class = "search_box" type="text"></dd>
+        <dd><input name="name" class = "search_box" type="text"></dd>
         <dt>学部</dt>
-        <dd><input id="password" class = "search_box" type="text"></dd></br>
+        <dd><input name="department" class = "search_box" type="text"></dd></br>
         <dt class="m_tag">興味のあるタグ</dt>
         <dd>
           <ul class="m_tag">
             <%tags.forEach(tag => {%>
-              <input type="checkbox" id="<%= tag %>" value="<%= tag %>"><%= tag %></li>
+              <input type="checkbox" name="mycheckbox" value="<%= tag %>"><%= tag %></li>
             <%})%>
         </ul>
-        <input type="submit" value="変更">
+        <button id="submitButton">変更</button>
     </dl>
   </form>
   </body>
