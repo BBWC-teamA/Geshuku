@@ -12,7 +12,15 @@ router.get('/:id', async function(req, res, next) {
     }
   }).then(events =>{
     // events.map((event) => {console.log(event.name)});
-    res.render('detail', { title: 'サークル詳細', club:club, events:events});
+    db.ClubTag.findAll({
+      attributes: ['tag'],
+      where: {
+        clubid:req.params.id
+      } 
+    }).then(tags => {
+      // tags.map((tag) => {console.log(tag.tag)});
+      // res.render('detail', { title: 'サークル詳細', club:club, events:events, tags:tags});
+    });
   });
 });
 
