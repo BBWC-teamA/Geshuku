@@ -9,8 +9,8 @@ const initMain = () => {
 
     getUser(function(user){ 
         if(user){
-            document.getElementById("signin").innerHTML="<a class = 'heada' href = '/mypage'>マイページ</a>"
-            document.getElementById("signup").innerHTML="<a id = logout class = 'heada' href = '/'>ログアウト</a>"
+            document.getElementById("reco_c").innerHTML="<h1>おすすめサークル情報</h1>"
+            document.getElementById("reco_e").innerHTML="<h1>おすすめイベント情報</h1>"
        
             var logout = document.getElementById("logout");
             // if (!logout){ return false;}
@@ -27,7 +27,3 @@ const initMain = () => {
     });
   
 }
-
-
-
-
