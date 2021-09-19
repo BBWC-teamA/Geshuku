@@ -4,7 +4,7 @@
     <title><%= title%></title>
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel='stylesheet' href='/stylesheets/style_detail.css' />
-    <script src="/javascripts/detail.js"></script>
+    <script type="module" src="/javascripts/detail.js"></script>
   </head>
   <body>
     <header>
@@ -46,7 +46,7 @@
 
 
     <div class="iine">
-      <button type="button" class="heart" id="likeButton">♡</button>
+      <button type="button" class="heart" id="likeButton" value="<%=club.id%>">♡</button>
       <a class="ii" href="/students">いいねしてる人一覧</a>
     </div>
 

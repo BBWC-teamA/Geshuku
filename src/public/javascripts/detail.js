@@ -1,4 +1,3 @@
-import { get } from "../../routes/setInfo";
 import {getUser} from "/function/firebase-auth.mjs";
 
 const post = (path, params, method='post') => {
@@ -25,9 +24,10 @@ const post = (path, params, method='post') => {
 
 
 document.getElementById("likeButton").onclick = () => {
+    var clubid = document.getElementById("likeButton").value;
     getUser(function(user) {
         if (user) {
-            post('/like', {clubid: club.id, contact:email});
+            post('/like', {clubid: clubid, contact:user.email});
         }
     });
     
