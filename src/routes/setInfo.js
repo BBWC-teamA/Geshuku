@@ -15,7 +15,7 @@ router.post('/', function(req, res, next) {
                 attributes: ['id'],
                 where: {contact: req.body.contact}
             }).then(studentId => {
-                console.log(studentId);
+                console.log(studentId.id);
                 tagArray.forEach(tag => {
                     tagDataArray.push({sutudentid:studentId, tag:tag});
                 });
