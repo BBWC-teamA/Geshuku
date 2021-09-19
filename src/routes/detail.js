@@ -6,7 +6,14 @@ const db = require('../models');
 router.get('/:id', async function(req, res, next) {
   // console.log(req.params.id);
   const club = await db.Club.findByPk(req.params.id);
-  res.render('detail', { title: 'サークル詳細', club:club});
+  db.Event.findAll({
+    where: {
+      clubid:req.params.id
+    }
+  }).then(events =>{
+    // events.map((event) => {console.log(event.name)});
+    res.render('detail', { title: 'サークル詳細', club:club, events:events});
+  });
 });
 
 module.exports = router;
