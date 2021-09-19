@@ -17,6 +17,15 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          name:"Kicker",
+          description:"私たちは，学内最大のサッカーサークルです．",
+          address:"○○キャンパス第１グラウンド",
+          contact:"soccer_circle.net",
+          image:"https://3.bp.blogspot.com/-y2JiYJsQpbM/W0xYy5sdB6I/AAAAAAABNbw/hnP3Bpl8CNkQdsJhkzNa57ee2xLT3GyDwCLcBGAs/s800/soccer_goalee_man.png",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
           name:"TEMPEST",
           description:"合唱団です．経験者，未経験者を問わずとにかく部員大代々募集中です！見学お待ちしております．",
           address:"全学共通教育棟",
@@ -52,15 +61,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
-        {
-          name:"Kicker",
-          description:"私たちは，学内最大のサッカーサークルです．",
-          address:"○○キャンパス第１グラウンド",
-          contact:"soccer_circle.net",
-          image:"https://3.bp.blogspot.com/-y2JiYJsQpbM/W0xYy5sdB6I/AAAAAAABNbw/hnP3Bpl8CNkQdsJhkzNa57ee2xLT3GyDwCLcBGAs/s800/soccer_goalee_man.png",
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
+
         {
           name:"軽音music",
           description:"軽音サークルです．初心者でも大歓迎！",
