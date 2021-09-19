@@ -5,6 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/header.css' />
     <link rel='stylesheet' href='/stylesheets/clubs_page.css' />
     <script type="module" src = "/javascripts/header.js"></script>
+    <!-- <script type="module" src="/javascripts/clubs.js"></script> -->
   </head>
   <body>
     <header>
@@ -13,7 +14,7 @@
         <div class = header_word>
           <a class = heada href='http://localhost:3000/clubs'>
             <p>サークル一覧</p>
-          </a> 
+          </a>
         </div>
         <div id=signin class = header_word>
           <a  class = heada href='http://localhost:3000/signin'>
@@ -33,20 +34,30 @@
       </div>
 
     </header>
-
-    <div class = "space"></div>
+<div class = "space"></div>
 
     <div class="box22">
       <h1>サークル一覧</h1>
     </div>
     <a class = "return" href='http://localhost:3000'>メインページに戻る</a>
 
-     <div class="circle_box">
-    <div class="tag">
+
+    <div class="circle_box">
+
+
+    <div id="off_tag" class="tag" onClick="clickHandler">
+
+
      <%tags.forEach(tag => {%>
-      <p><%= tag %></p>
+      <p id="<%= tag %>" class="<%= tag %>"><%= tag %></p>
       <%})%>
     </div>
+
+    <div id="on_tag" class="tag">
+
+    </div>
+
+
 
     <div class="circle__">
     <% clubs.forEach((club) => { %>
@@ -71,10 +82,10 @@
                 <img class= "circle_icon"  src= "<%= club.image %>">
               </a>
               <h1 class="name"><%= club.name %></h1>
-              
+
             </td>
           <% }) %>
-          </tr> 
+          </tr>
 
            <tr>
             <td>
@@ -100,9 +111,9 @@
               <h1 class="name">サークル名</h1>
               <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
             </td>
-            
+
           </tr> -->
-          
+
         </div>
       </div>
     </table>
