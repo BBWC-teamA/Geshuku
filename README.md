@@ -20,6 +20,11 @@ npm install
 ```
 
 ### データベースの初期化
+まず，sequelizeのインストール
+```sh
+docker-compose run --rm app npm i mysql2 sequelize sequelize-cli
+```
+
 Geshuku直下の位置で，DBマイグレーションを実行
 ```sh
 docker-compose run --rm app npx sequelize-cli db:migrate
@@ -28,4 +33,13 @@ docker-compose run --rm app npx sequelize-cli db:migrate
 次に，データベースに初期データを挿入
 ```sh
 docker-compose run --rm app npx sequelize-cli db:seed:all
+```
+
+データベースの中身を確認したい場合は
+```sh
+docker-compose up -d
+```
+でコンテナを起動し，以下のコマンドを入力すると，mysqlを起動できる．
+```sh
+docker-compose exec mysql mysql -uroot -p
 ```
