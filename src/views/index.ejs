@@ -13,12 +13,12 @@
       <span class = "Logo"></span>
       <div class = "header_container">
         <div class = header_word>
-          <a class = heada href='http://localhost:3000/clubs'>
+          <a class = heada href='/clubs'>
             <p>サークル一覧</p>
           </a> 
         </div>
         <div id=signin class = header_word>
-          <a  class = heada href='http://localhost:3000/signin'>
+          <a  class = heada href='/signin'>
             <p>ログイン</p>
           </a>
           <!-- <input class = "search_box"> -->
@@ -28,7 +28,7 @@
           <!-- </input> -->
         </div>
         <div class = header_word>
-          <a  class = heada href='http://localhost:3000/signup'>
+          <a  class = heada href='/signup'>
             <p>新規登録</p>
           </a>
         </div>
@@ -45,59 +45,44 @@
     <table>
       <div class="container_circle">
         <div class = "information">
+          <% clubs.forEach((club) => { %>
           <tr>
             <td>
-              <a class ="circle" href='http://localhost:3000/detail'>
-                <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
+              <a class ="circle" href='/detail'>
+                <img class= "circle_icon"  src= "<%= club.image %>">
               </a>
-              <h1 class="name">サークル名</h1>
+              <h1 class="name"><%= club.name %></h1>
               <!-- <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p> -->
             </td>
-
-            <td>
-              <a class ="circle" href='http://localhost:3000/detail'>
-                <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
-              </a>
-              <h1 class="name">サークル名</h1>
-              <!-- <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p> -->
-            </td>
-
-            <td>
-              <a class ="circle" href='http://localhost:3000/detail'>
-                <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
-              </a>
-              <h1 class="name">サークル名</h1>
-              <!-- <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p> -->
-            </td>
-            
+          <% }) %>
           </tr>
 
-          <tr>
+          <!-- <tr>
             <td>
-              <a class ="circle" href='http://localhost:3000/detail'>
+              <a class ="circle" href='/detail'>
                 <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
               </a>
               <h1 class="name">サークル名</h1>
-              <!-- <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p> -->
+              <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
             </td>
 
             <td>
-              <a class ="circle" href='http://localhost:3000/detail'>
+              <a class ="circle" href='/detail'>
                 <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
               </a>
               <h1 class="name">サークル名</h1>
-              <!-- <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p> -->
+              <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
             </td>
 
             <td>
-              <a class ="circle" href='http://localhost:3000/detail'>
+              <a class ="circle" href='/detail'>
                 <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
               </a>
               <h1 class="name">サークル名</h1>
-              <!-- <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p> -->
+              <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
             </td>
             
-          </tr>
+          </tr> -->
           
         </div>
       </div>
@@ -122,7 +107,7 @@
         <td>テニスサークル</td>
         <td>BBQ</td>
         <td>〇〇公園でBBQを行います．興味のある方は参加して見てください！</td>
-        <td class= "tag"><a class= "check" href="http://localhost:3000/detail">サークルページを見る</a></td>
+        <td class= "tag"><a class= "check" href="/detail">サークルページを見る</a></td>
       </tr>
     </table>
 
