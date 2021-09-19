@@ -5,7 +5,7 @@ const db = require('../models/');
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      'studentevent',
+      'studentevents',
       [
         {
           studentid: 1,

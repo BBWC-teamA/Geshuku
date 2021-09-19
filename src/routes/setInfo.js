@@ -43,7 +43,7 @@ router.post('/', function(req, res, next) {
                     tagDataArray.push({studentid:student.id, tag:tag});
                 });
                 db.StudentTag.bulkCreate(tagDataArray);
-                res.render('mypage', { title: 'マイページ' });
+                res.redirect('/mypage/' + String(req.body.contact));
             });
         }
     });

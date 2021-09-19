@@ -15,6 +15,7 @@ var detailRouter = require('./routes/detail');
 var friendsRouter = require('./routes/friends');
 var editRouter = require('./routes/edit');
 var setInfoRouter = require('./routes/setInfo');
+var likeRouter = require('./routes/like');
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use('/detail', detailRouter);
 app.use('/friends', friendsRouter);
 app.use('/edit', editRouter);
 app.use('/setInfo', setInfoRouter);
+app.use('/like', likeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
