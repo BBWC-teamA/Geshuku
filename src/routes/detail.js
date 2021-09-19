@@ -19,7 +19,7 @@ router.get('/:id', async function(req, res, next) {
       } 
     }).then(tags => {
       // tags.map((tag) => {console.log(tag.tag)});
-      // res.render('detail', { title: 'サークル詳細', club:club, events:events, tags:tags});
+      res.render('detail', { title: 'サークル詳細', club:club, events:events, tags:tags});
     });
   });
 });
