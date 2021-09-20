@@ -10,7 +10,7 @@ const initMain = () => {
     getUser(function(user){ 
         if(user){
             document.getElementById("reco_c").innerHTML="<h1>おすすめサークル情報</h1>"
-            document.getElementById("reco_e").innerHTML="<h1>おすすめイベント情報</h1>"
+            document.getElementById("reco_e").innerHTML="<h1>最新イベント情報</h1>"
        
             var logout = document.getElementById("logout");
             // if (!logout){ return false;}
