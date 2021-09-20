@@ -24,6 +24,9 @@ const post = (path, params, method='post') => {
 
 
 document.getElementById("likeButton").onclick = () => {
+    console.log("111");
+    //要素の取得 → 背景色を変える
+    document.getElementById('likeButton').style.color='pink';
     var clubid = document.getElementById("likeButton").value;
     getUser(function(user) {
         if (user) {

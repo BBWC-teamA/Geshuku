@@ -47,17 +47,10 @@
 
     <div class="iine">
       <!-- <img src="/stylesheets/hartb.png" id=”image_file”  onclick="henkou()"> -->
-      <button type="button" class="heart" id="likeButton">♡</button>
+      <button type="button" class="heart" id="likeButton" value="<%= club.id %>">♡</button>
       <!-- <input type="image" src="/stylesheets/hartb.png" alt="ハート" id = likeButton onclick="heart"> -->
       <!-- <img id=”image_file” src=”stylesheets/hartb.png” onclick="henkou()"> -->
-      <script>
-        //要素の取得 → クリックされたとき
-       document.getElementById('likeButton').addEventListener('click',function(){
-       console.log("111");
-       //要素の取得 → 背景色を変える
-       document.getElementById('likeButton').style.color='pink';
-    });
-      </script>
+      
       <a class="ii" href="/students/<%=club.id%>">いいねしてる人一覧</a>
     </div>
 
