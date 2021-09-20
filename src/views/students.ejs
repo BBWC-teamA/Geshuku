@@ -44,11 +44,11 @@
     </div>
     <a class = "return" href='/detail/<%= clubid %>'>サークル詳細に戻る</a>
     <table>
-      <% students.forEach((student) => { %>
       <tr>
         <th>名前</th>
         <th>学部</th>
         <th>Check</th>
+      <% students.forEach((student) => { %>
       </tr>
       <tr class= "list">
         <td class="icon A"><%= student.name %></td>
