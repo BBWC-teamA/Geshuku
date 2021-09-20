@@ -46,16 +46,18 @@
     </div>
     <a class = "return" id="return">マイページに戻る</a>
     <table>
+      <% friends.forEach((friend) => { %>
       <tr>
         <th>名前</th>
         <th>学部</th>
         <th>Check</th>
       </tr>
       <tr class= "list">
-        <td class="icon A">Aさん</td>
-        <td>工学部</td>
+        <td class="icon A"><%= friend.name %></td>
+        <td><%= friend.department %></td>
         <td class= "tag"><a class = "check" href="#">チャットを送る</a></td>
       </tr>
+      <% }) %>
     </table>
   </body>
 </html>
