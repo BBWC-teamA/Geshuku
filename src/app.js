@@ -17,6 +17,7 @@ var editRouter = require('./routes/edit');
 var setInfoRouter = require('./routes/setInfo');
 var likeRouter = require('./routes/like');
 var reserveRouter = require('./routes/reserve');
+var followRouter = require('./routes/follow');
 
 var app = express();
 
@@ -44,6 +45,7 @@ app.use('/edit', editRouter);
 app.use('/setInfo', setInfoRouter);
 app.use('/like', likeRouter);
 app.use('/reserve', reserveRouter);
+app.use('/follow', followRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
