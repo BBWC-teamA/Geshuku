@@ -33,7 +33,7 @@ router.post('/', function(req, res, next) {
         }
       }).then(students => {
         // students.map(student => {console.log(student.name)});
-        res.render('friends', { title: 'フレンド一覧', students:students });
+        res.render('friends', { title: 'フレンド一覧', friends:students });
       })
     }); 
   });

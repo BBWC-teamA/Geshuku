@@ -102,3 +102,7 @@ li{
     font-weight: bold;
     font-size: 15px;
   }
+
+.button_container {
+    cursor: pointer;
+}
