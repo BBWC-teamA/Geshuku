@@ -22,17 +22,31 @@ const post = (path, params, method='post') => {
   form.submit();
 }
 
+var clubid = document.getElementById("likeButton").value;
 
 document.getElementById("likeButton").onclick = () => {
     console.log("111");
     //要素の取得 → 背景色を変える
     document.getElementById('likeButton').style.color='pink';
-    var clubid = document.getElementById("likeButton").value;
     getUser(function(user) {
         if (user) {
             post('/like', {clubid: clubid, contact:user.email});
         }
     });
     
+}
+
+window.onload = () => {
+    var checkElements = document.getElementsByClassName("check");
+    for (let i=0; i<checkElements.length; i++) {
+        checkElements[i].onclick = () => {
+            var eventid = checkElements[i].getAttribute("event-id");
+            getUser(function(user) {
+                if (user) {
+                    post('/reserve', {eventid:eventid, contact:user.email, clubid:clubid});
+                }
+            })
+        }
+    }
 }
 

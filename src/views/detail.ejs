@@ -93,7 +93,7 @@
           <td><%= event.date %></td>
           <td><%= event.name %></td>
           <td><%= event.description %></td>
-          <td class= "tag"><a class= "check" href="http://localhost:3000/detail">イベントを予約</a></td>
+          <td class= "tag"><a class= "check" event-id="<%= event.id %>">イベントを予約</a></td>
           <% }) %>
         </table>
       
