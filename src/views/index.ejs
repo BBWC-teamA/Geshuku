@@ -107,24 +107,24 @@
 
 
     <div id = reco_e class="box22">
-      <h1>イベント情報</h1>
+      <h1>最新イベント情報</h1>
     </div>
 
     <table>
+      <% events.forEach((event) => { %>
       <tr>
         <th>日程</th>
-        <th>サークル名</th>
-        <th>イベント</th>
+        <th>イベント名</th>
         <th>イベント内容</th>
         <th>　</th>
       </tr>
       <tr class= "list">
-        <td>10/5</td>
-        <td>テニスサークル</td>
-        <td>BBQ</td>
-        <td>〇〇公園でBBQを行います．興味のある方は参加して見てください！</td>
-        <td class= "tag"><a class= "check" href="/detail">サークルページを見る</a></td>
+        <td><%= event.date %></td>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+        <td class= "tag"><a class= "check" href="/detail/<%= event.clubid %>">サークルページを見る</a></td>
       </tr>
+<% }) %>
     </table>
 
     <br>
