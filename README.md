@@ -25,6 +25,11 @@ npm install
 docker-compose run --rm app npm i mysql2 sequelize sequelize-cli
 ```
 
+既にデータベースを生成していた場合，以下のコマンドで初期化する．
+```sh
+docker-compose run --rm app npx sequelize-cli db:migrate:undo:all
+```
+
 Geshuku直下の位置で，DBマイグレーションを実行
 ```sh
 docker-compose run --rm app npx sequelize-cli db:migrate
