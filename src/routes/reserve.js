@@ -9,7 +9,7 @@ router.post('/', function(req, res, next) {
     }).then(student => {
         if(student) {
             db.StudentEvent.count({
-                where: {studentid:student.id}
+                where: {studentid:student.id, eventid:req.body.eventid}
             }).then(dataCount => {
                 if(dataCount == 0) {
                     db.StudentEvent.create({studentid:student.id, eventid:req.body.eventid});
