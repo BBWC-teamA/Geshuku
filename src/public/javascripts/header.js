@@ -47,10 +47,11 @@ const initMain = () => {
             })
 
             document.getElementById("returnmain").onclick = () => {
-                post('/', {contact:email});
+                post('/', {contact:user.email});
             }
 
             document.getElementById("mypage").onclick = () => {
+                console.log("mypage押されたよ")
                 window.location.href = '/mypage/' + user.email;
             }
 
