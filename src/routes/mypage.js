@@ -37,8 +37,8 @@ router.get('/:email', function(req, res, next) {
       });
     } else {
       const student = {
-        name:"下宿 太郎",
-        department: "工学部",
+        name:"ユーザ名",
+        department: "学部",
         contact:req.params.email
       }
       res.render('mypage', { title: 'マイページ', student:student, tags:[], events:[] })

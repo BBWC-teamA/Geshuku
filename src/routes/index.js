@@ -59,7 +59,7 @@ router.post('/', async function(req, res, next) {
           }
         }).then(clubTags => {
           var clubidArray = [];
-          clubTags.map(clubTag => {if (clubidArray.indexOf(clubTag.clubid) < 0) {clubidArray.push(clubTag.id)}})
+          clubTags.map(clubTag => {if (clubidArray.indexOf(clubTag.clubid) < 0) {clubidArray.push(clubTag.clubid)}})
           db.Club.findAll({
             where: {
               id: {
