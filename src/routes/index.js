@@ -4,6 +4,7 @@ const { Op } = require("sequelize");
 const db = require('../models');
 
 const sendNum = 6;
+const eventNum = 5;
 
 const createRandomArray = (n) => {
   var array = [];
@@ -27,7 +28,13 @@ router.get('/', async function(req, res, next) {
         }
       }
     }).then(clubs => {
-      res.render('index', { title: 'メイン', clubs: clubs});
+      db.Event.findAll({
+        limit: eventNum,
+        order: [['date', 'ASC']]
+      }).then(events => {
+        // events.map(event => {console.log(event.date)});
+        res.render('index', { title: 'メイン', clubs: clubs, events});
+      })
     })
   });
 });
