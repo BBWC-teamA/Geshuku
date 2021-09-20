@@ -66,7 +66,42 @@ module.exports = {
           clubid: 6,
           createdAt: new Date(),
           updatedAt: new Date(),
-        }
+        },
+        {
+          studentid: 8,
+          clubid: 8,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          studentid: 9,
+          clubid: 12,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          studentid: 2,
+          clubid: 13,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },{
+          studentid: 4,
+          clubid: 13,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          studentid: 9,
+          clubid: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          studentid: 10,
+          clubid: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       
       ],
       {}
