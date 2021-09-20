@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -90,18 +91,22 @@
       <h2>-schedule-</h2>
   
       <table>
+        <% events.forEach((event) => { %>
         <tr>
           <th>日付</th>
-          <th>サークル</th>
-          <th>イベント</th>
-          <th>　</th>
+          <th>イベント名</th>
+          <th>詳細</th>
+          <th></th>
+          <th></th>
         </tr>
         <tr>
-          <td>4/30</td>
-          <td>テニスサークル</td>
-          <td>新歓</td>
+          <td><%= event.date %></td>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+          <td class= "tag"><a class= "check" href="/detail/<%= event.clubid %>">サークルページを見る</a></td>
           <td><input type="button" class="btn-border"value="cancel"></td>
         </tr>
+   <% }) %>
       </table>
 
     </div>
