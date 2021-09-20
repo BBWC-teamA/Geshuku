@@ -29,7 +29,7 @@ router.post('/', function(req, res, next) {
                     }
                 }).then(() => {
                     db.StudentTag.bulkCreate(tagDataArray);
-                    res.render('mypage', { title: 'マイページ' });
+                    res.redirect('/mypage/' + String(req.body.contact));
                 });
             });
         } else {
