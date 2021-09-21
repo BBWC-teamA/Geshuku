@@ -3,9 +3,9 @@
   <head>
     <title><%= title%></title>
     <link rel='stylesheet' href='/stylesheets/header.css' />
-    <link rel='stylesheet' href='/stylesheets/students_page.css' />
+    <link rel='stylesheet' href='/stylesheets/friends_page.css' />
     <script type="module" src = "/javascripts/header.js"></script>
-    <script type="module" src = "/javascripts/students.js"></script>
+    <script type="module" src = "/javascripts/friends.js"></script>
   </head>
   <body>
     <header>
@@ -38,25 +38,26 @@
         </div>
         
       </header>
+
     <div class = "space"></div>
 
     <div class="box22">
-      <h1>いいねした人一覧</h1>
+      <h1>友達一覧</h1>
     </div>
-    <a class = "return" href='/detail/<%= clubid %>'>サークル詳細に戻る</a>
+    <a class = "return" id="return">マイページに戻る</a>
     <table>
       <tr>
         <th>名前</th>
         <th>学部</th>
         <th>Check</th>
-      <% students.forEach((student) => { %>
       </tr>
+      <% friends.forEach((friend) => { %>
       <tr class= "list">
-        <td class="icon A"><%= student.name %></td>
-        <td><%= student.department %></td>
-        <td class= "tag"><a class = "check" club-id="<%= clubid%>" student-id="<%= student.id %>">友達になる</a></td>
+        <td class="icon A"><%= friend.name %></td>
+        <td><%= friend.department %></td>
+        <td class= "tag"><a class = "check" href="#">チャットを送る</a></td>
       </tr>
-      <% }); %>
+      <% }) %>
     </table>
   </body>
 </html>

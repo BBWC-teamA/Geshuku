@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel='stylesheet' href='/stylesheets/style_detail.css' />
+    <script type="module" src="/javascripts/detail.js"></script>
+    <script type="module" src="/javascripts/header.js"></script>
+  </head>
+  <body>
+    <header>
+
+      <a>
+          <img class = Logo id = "returnmain" src="/stylesheets/Logo.png" alt="Logo">
+      </a>
+        <!-- <span class = "Logo"></span> -->
+        <div class = "header_container">
+          <div class = header_word>
+            <a class = heada href='/clubs'>
+              <p>サークル一覧</p>
+            </a> 
+          </div>
+          <div id=signin class = header_word>
+            <a   class = heada href='/signin'>
+              <p>ログイン</p>
+            </a>
+            <!-- <input class = "search_box"> -->
+             <!-- <div class = "search_icon"> -->
+               <!-- <img src = "/public/stylesheets/search_icon.png"> -->
+             <!-- </div>  -->
+            <!-- </input> -->
+          </div>
+          <div  id = signup class = header_word>
+            <a   class = heada href='/signup'>
+              <p>新規登録</p>
+            </a>
+          </div>
+        </div>
+        
+      </header>
+    <div class = "space"></div>
+    <div class="box22">
+      <h1>サークル詳細</h1>
+    </div>
+
+
+    <div>
+      <h1 class = center><%= club.name %></h1>
+    </div>
+
+    <img src="<%= club.image %>" alt="sports_tennis_woman.png" class="club_img" >
+
+
+    <div class="iine">
+      <!-- <img src="/stylesheets/hartb.png" id=”image_file”  onclick="henkou()"> -->
+      <button type="button" class="heart" id="likeButton" value="<%= club.id %>">♡</button>
+      <!-- <input type="image" src="/stylesheets/hartb.png" alt="ハート" id = likeButton onclick="heart"> -->
+      <!-- <img id=”image_file” src=”stylesheets/hartb.png” onclick="henkou()"> -->
+      
+      <a class="ii" href="/students/<%=club.id%>">いいねしてる人一覧</a>
+    </div>
+
+    <BR>
+    <BR>
+      
+    <h2 class = center>-#Tag-</h2>
+
+    <% tags.forEach((tag) => { %>
+    <ul>
+      <li><%= tag.tag %></li>
+    </ul>
+    <% }) %>
+    <BR>
+      <BR>
+    
+    <h1 class = center>活動内容</h1>
+    <div class = content>  
+      <p><%= club.description %></p>
+    </div>
+    <BR>
+    <BR>
+
+      <h1 class = center>イベント一覧</h1>
+  
+      <table>
+        <% events.forEach((event) => { %>
+        <tr>
+          <th>日時</th>
+          <th>イベント</th>
+          <th>イベント内容</th>
+          <th>　</th>
+        </tr>
+        <tr class= "list">
+          <td><%= event.date %></td>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+          <td class= "tag"><a class= "check" event-id="<%= event.id %>">イベントを予約</a></td>
+          <% }) %>
+        </table>
+      
+  
+      <br>
+      <br>
+
+  </body>
+</html>

@@ -3,9 +3,7 @@ var router = express.Router();
 const db = require('../models');
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
-  const clubs = await db.Club.findAll();
-  // clubs.map((club) => {console.log(club.name)});
+router.get('/', function(req, res, next) {
   db.ClubTag.findAll({
     attributes: ['tag'],
   }).then(tags => {
@@ -15,7 +13,8 @@ router.get('/', async function(req, res, next) {
         tagArray.push(tag.tag);
       }
     });
-    res.render('clubs', { title: 'サークル一覧', clubs:clubs, tags:tagArray});
+    console.log(tagArray);
+      res.render('edit', { title: '編集ページ', tags:tagArray});
   });
 });
 

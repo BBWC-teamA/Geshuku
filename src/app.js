@@ -10,6 +10,14 @@ var signinRouter = require('./routes/signin');
 var singupRouter = require('./routes/signup');
 var studentsRouter = require('./routes/students');
 var clubsRouter = require('./routes/clubs');
+var mypageRouter = require('./routes/mypage');
+var detailRouter = require('./routes/detail');
+var friendsRouter = require('./routes/friends');
+var editRouter = require('./routes/edit');
+var setInfoRouter = require('./routes/setInfo');
+var likeRouter = require('./routes/like');
+var reserveRouter = require('./routes/reserve');
+var followRouter = require('./routes/follow');
 
 var app = express();
 
@@ -22,6 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use("/function", express.static(__dirname + '/function'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -29,6 +38,14 @@ app.use('/signin', signinRouter);
 app.use('/signup', singupRouter);
 app.use('/students', studentsRouter);
 app.use('/clubs', clubsRouter);
+app.use('/mypage', mypageRouter);
+app.use('/detail', detailRouter);
+app.use('/friends', friendsRouter);
+app.use('/edit', editRouter);
+app.use('/setInfo', setInfoRouter);
+app.use('/like', likeRouter);
+app.use('/reserve', reserveRouter);
+app.use('/follow', followRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

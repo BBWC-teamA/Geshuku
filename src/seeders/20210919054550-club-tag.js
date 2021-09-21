@@ -1,0 +1,437 @@
+'use strict';
+
+const db = require('../models/');
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert(
+      'clubtags',
+      [
+        {
+          clubid:1,
+          tag:"サークル",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:1,
+          tag:"テニス",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:1,
+          tag:"ソフトテニス",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:1,
+          tag:"公認",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:1,
+          tag:"球技",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:1,
+          tag:"運動",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:1,
+          tag:"男女兼用",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:2,
+          tag:"サークル",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:2,
+          tag:"サッカー",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:2,
+          tag:"運動",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:2,
+          tag:"公認",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:2,
+          tag:"球技",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:2,
+          tag:"男子専用",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:3,
+          tag:"部活",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:3,
+          tag:"レア",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:3,
+          tag:"公認",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:3,
+          tag:"文化",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:3,
+          tag:"合唱",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:3,
+          tag:"男女兼用",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:4,
+          tag:"サークル",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:4,
+          tag:"バスケットボール",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:4,
+          tag:"球技",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:4,
+          tag:"運動", 
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:4,
+          tag:"非公認",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:5,
+          tag:"部活",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:5,
+          tag:"公認",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:5,
+          tag:"野球",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:5,
+          tag:"運動", 
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:5,
+          tag:"球技",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:5,
+          tag:"男子専用",  
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          clubid:6,
+          tag:"サークル",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:6,
+          tag:"男女兼用",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:6,
+          tag:"趣味",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:6,
+          tag:"文化",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },{
+          clubid:6,
+          tag:"公認",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:6,
+          tag:"アカペラ",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },{
+          clubid:6,
+          tag:"合唱",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+
+      {
+          clubid:7,
+          tag:"サークル",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:7,
+          tag:"男女兼用",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:7,
+          tag:"イベント",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:7,
+          tag:"文化",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:7,
+          tag:"非公認",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:7,
+          tag:"初心者向け",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+        clubid : 7,
+        tag : "軽音",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+          clubid:8,
+          tag:"同好会",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:8,
+          tag:"男女兼用",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:8,
+          tag:"趣味",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:8,
+          tag:"文化",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:8,
+          tag:"公認",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:8,
+          tag:"レア",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:9,
+          tag:"サークル",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:9,
+          tag:"男女兼用",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:9,
+          tag:"イベント",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:9,
+          tag:"運動",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:9,
+          tag:"非公認",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:9,
+          tag:"スノーボード",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+          clubid:9,
+          tag:"体験",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+      },
+      {
+        clubid : 10,
+        tag : "チア",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+        clubid : 10,
+        tag : "#公認",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+        clubid : 10,
+        tag : "女子専用",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+        clubid : 11,
+        tag : "軽音",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+        clubid : 11,
+        tag :"公認",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+        clubid : 11,
+        tag : "男女兼用",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+        clubid : 12,
+        tag : "バレー",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+        clubid : 12,
+        tag : "公認",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+        clubid : 12,
+        tag : "男女兼用",
+        createdAt: new Date(),
+         updatedAt: new Date(),
+      },
+      {
+        clubid : 13,
+        tag : "ゲーム",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        clubid : 13,
+        tag : "非公認",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        clubid : 13,
+        tag : "男女兼用",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        clubid : 13,
+        tag : "レア",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }
+      ],
+      {}
+    );
+  },
+
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.bulkDelete('Users', null, {});
+  },
+};

@@ -1,11 +1,141 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title%></title>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/header.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="module" src = "/javascripts/header.js"></script>
+    <script type="module" src = "/javascripts/mainpage.js"></script>
   </head>
   <body>
-    <h1><%= title%></h1>
-    <p>Welcome to <%= title%></p>
+    <!-- <h1><%= title %></h1>
+    <p>ようこそ <%= title %></p> -->
+    <header>
+
+      <a>
+          <img class = Logo id = "returnmain" src="/stylesheets/Logo.png" alt="Logo">
+      </a>
+        <!-- <span class = "Logo"></span> -->
+        <div class = "header_container">
+          <div class = header_word>
+            <a class = heada href='/clubs'>
+              <p>サークル一覧</p>
+            </a> 
+          </div>
+          <div id=signin class = header_word>
+            <a   class = heada href='/signin'>
+              <p>ログイン</p>
+            </a>
+            <!-- <input class = "search_box"> -->
+             <!-- <div class = "search_icon"> -->
+               <!-- <img src = "/public/stylesheets/search_icon.png"> -->
+             <!-- </div>  -->
+            <!-- </input> -->
+          </div>
+          <div  id = signup class = header_word>
+            <a   class = heada href='/signup'>
+              <p>新規登録</p>
+            </a>
+          </div>
+        </div>
+        
+      </header>
+
+    <div class = "space"></div>
+
+    <div id = reco_c class="box22">
+      <h1>サークル情報</h1>
+    </div>
+    
+    <div class="circle__">
+      <% clubs.forEach((club) => { %>
+        <div class="circle_button">
+        <a class ="circle" href='/detail/<%= club.id %>'>
+          <img class= "circle_icon"  src= "<%= club.image %>">
+        </a>
+        <h1 class="name"><%= club.name %></h1>
+      </div>
+        <% }) %>
+      </div>
+
+    <!-- <table>
+      <div class="container_circle">
+        <div class = "information">
+          <% clubs.forEach((club) => { %>
+          <tr>
+            <td>
+              <a class ="circle" href='/detail/<%= club.id %>'>
+                <img class= "circle_icon"  src= "<%= club.image %>">
+              </a>
+              <h1 class="name"><%= club.name %></h1> -->
+              <!-- <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p> -->
+            <!-- </td>
+          <% }) %>
+          </tr> -->
+
+          <!-- <tr>
+            <td>
+              <a class ="circle" href='/detail'>
+                <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
+              </a>
+              <h1 class="name">サークル名</h1>
+              <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </td>
+
+            <td>
+              <a class ="circle" href='/detail'>
+                <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
+              </a>
+              <h1 class="name">サークル名</h1>
+              <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </td>
+
+            <td>
+              <a class ="circle" href='/detail'>
+                <img class= "circle_icon"  src="/stylesheets/sports_tennis_woman.png">
+              </a>
+              <h1 class="name">サークル名</h1>
+              <p class="activity">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </td>
+            
+          </tr> -->
+          
+        </div>
+      </div>
+    </table>
+
+
+
+    <div id = reco_e class="box22">
+      <h1>最新イベント情報</h1>
+    </div>
+
+    <table>
+      <% events.forEach((event) => { %>
+      <tr>
+        <th>日程</th>
+        <th>イベント名</th>
+        <th>イベント内容</th>
+        <th>　</th>
+      </tr>
+      <tr class= "list">
+        <td><%= event.date %></td>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+        <td class= "tag"><a class= "check" href="/detail/<%= event.clubid %>">サークルページを見る</a></td>
+      </tr>
+<% }) %>
+    </table>
+
+    <br>
+    <br>
+
+
+    
+    
+
+    
+
+
   </body>
 </html>

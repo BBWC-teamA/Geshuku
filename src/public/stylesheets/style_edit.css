@@ -1,0 +1,14 @@
+body{
+  color:gray;
+  text-align: center;
+  }
+
+.tag{
+    border: solid 1px gray;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.search_box{
+  border: solid 1px gray;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}

@@ -1,0 +1,108 @@
+.status_container{
+    display: flex;
+    justify-content: space-between;
+    top: 30%;
+    left: 25%;
+    height: 200px;
+    width: 50%;
+    background-color: aliceblue;
+}
+
+img{
+    width: 200px;
+    height: 100%;
+    border: 1px solid #000;
+    margin-left: 10%;
+}
+.inform_container{
+    display: flex;
+    flex-direction: column;
+    width: 40%; 
+    margin-top: 25px;
+    margin-right: 10%;
+    align-items: center;
+}
+.button_container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.name{
+    font-size: 45px;
+}
+.department{
+    font-size: 30px;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 70%;
+}
+  
+table tr{
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+}
+  
+  
+table th,table td{
+    text-align: center;
+    width: 25%;
+    padding: 15px 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
+
+
+.btn-border {
+    border: 2px solid #000;
+    border-radius: 0;
+    background: #fff;
+}
+  
+.btn-border:hover {
+    color: #fff;
+    background: rgb(245, 67, 67);
+}
+li{
+    display: inline;
+    border: solid 1px gray;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.check {
+    display: block;
+    padding: 20px 0;
+    width:75%; 
+    height:100%;
+    margin: 0 auto;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 200% auto;
+    background-image: linear-gradient(
+      to right,
+      #000000 0%,
+      #000000 50%,
+      #854d50 50%,
+      #613b3d 100%
+    );
+    box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+    transition: background-position ease 0.4s;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+.button_container {
+    cursor: pointer;
+}
